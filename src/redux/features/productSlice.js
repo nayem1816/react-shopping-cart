@@ -13,6 +13,8 @@ export const productSlice = createSlice({
     name: 'product',
     initialState: {
         products: [],
+        categories: [],
+        colors: [],
         loading: false,
         error: null,
     },
@@ -24,6 +26,12 @@ export const productSlice = createSlice({
             state.products = action.payload;
             state.loading = false;
             state.error = null;
+            state.categories = [
+                ...new Set(action.payload.map((item) => item.category)),
+            ];
+            state.colors = [
+                ...new Set(action.payload.map((item) => item.color)),
+            ];
         });
         builder.addCase(fetchProduct.rejected, (state, action) => {
             state.loading = false;
@@ -31,6 +39,13 @@ export const productSlice = createSlice({
             state.products = [];
         });
     },
+    reducers: {
+        setProduct: (state, action) => {
+            state.products = action.payload;
+        },
+    },
 });
+
+export const { setProduct } = productSlice.actions;
 
 export default productSlice.reducer;
