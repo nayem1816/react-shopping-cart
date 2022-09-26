@@ -25,7 +25,6 @@ const filterSlice = createSlice({
             state.filteredProducts = tempProducts;
         },
         FILTER_BY_CATEGORY: (state, action) => {
-            // console.log(action.payload);
             const { products, category } = action.payload;
             let tempProducts = [];
             if (category === 'All') {
@@ -41,7 +40,6 @@ const filterSlice = createSlice({
         FILTER_BY_COLOR: (state, action) => {
             console.log(action.payload);
 
-            // filter color by category
             const { products, color, category } = action.payload;
             let tempProducts = [];
 
