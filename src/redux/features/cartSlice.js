@@ -48,12 +48,29 @@ export const cartSlice = createSlice({
                         ...action.payload.product,
                         quantity: quantity,
                     });
+                    toast.success('Product added to cart', {
+                        position: 'top-right',
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                    });
                 }
                 localStorage.setItem('cart', JSON.stringify(state.cart));
             } else {
                 state.cart = state.cart.filter((product) => product.id !== id);
-
                 localStorage.setItem('cart', JSON.stringify(state.cart));
+                toast.error('Product removed from cart', {
+                    position: 'top-right',
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
             }
         },
         updateCart: (state, action) => {
@@ -71,7 +88,7 @@ export const cartSlice = createSlice({
                     isProductInCart.quantity -= 1;
                 } else {
                     toast.info('Product quantity cannot be less than 1', {
-                        position: 'bottom-center',
+                        position: 'top-right',
                         autoClose: 1000,
                         hideProgressBar: true,
                         closeOnClick: true,
@@ -90,8 +107,8 @@ export const cartSlice = createSlice({
 
             if (isProductInCart) {
                 state.cart = state.cart.filter((product) => product.id !== id);
-                toast.success(`${isProductInCart.name} removed from cart`, {
-                    position: 'bottom-center',
+                toast.success(`${isProductInCart.title} removed from cart`, {
+                    position: 'top-right',
                     autoClose: 1000,
                     hideProgressBar: true,
                     closeOnClick: true,
@@ -100,7 +117,7 @@ export const cartSlice = createSlice({
                 });
             } else {
                 toast.info('This product is not in your cart', {
-                    position: 'bottom-center',
+                    position: 'top-right',
                     autoClose: 1000,
                     hideProgressBar: true,
                     closeOnClick: true,
@@ -108,20 +125,11 @@ export const cartSlice = createSlice({
                     draggable: true,
                 });
             }
-
             // add data to local storage
             localStorage.setItem('cart', JSON.stringify(state.cart));
         },
         clearCart: (state) => {
             state.cart = [];
-            // toast.error('All product remove from cart', {
-            //     position: 'bottom-center',
-            //     autoClose: 1000,
-            //     hideProgressBar: true,
-            //     closeOnClick: true,
-            //     pauseOnHover: true,
-            //     draggable: true,
-            // });
             // add data to local storage
             localStorage.setItem('cart', JSON.stringify(state.cart));
         },

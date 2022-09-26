@@ -33,7 +33,9 @@ const CartTotal = () => {
                 <h1 className="text-2xl font-semibold ">Cart Totals</h1>
                 <div className="sub-total flex justify-between mt-10">
                     <h5 className="font-semibold text-slate-500">Subtotal</h5>
-                    <h5 className="font-semibold text-blue-400">${total}</h5>
+                    <h5 className="font-semibold text-blue-400">
+                        ${total.toFixed(2)}
+                    </h5>
                 </div>
                 <hr className="my-2 h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
                 <div className="sub-total flex justify-between mt-2">
@@ -42,7 +44,7 @@ const CartTotal = () => {
                         style={{ color: '#1246AF' }}
                         className="font-bold text-xl"
                     >
-                        ${total}
+                        ${total.toFixed(2)}
                     </h5>
                 </div>
                 <button

@@ -11,7 +11,8 @@
             "count": 120
         },
         "color": "black",
-        "stock": true
+        "stock": true,
+        "keyWord": ["bag", "backpack", "laptop"]
     },
     {
         "id": 2,
@@ -25,7 +26,8 @@
             "count": 259
         },
         "color": "white",
-        "stock": true
+        "stock": true,
+        "keyWord": ["t-shirt", "cloth", "man"]
     },
     {
         "id": 3,
@@ -39,7 +41,8 @@
             "count": 500
         },
         "color": "gray",
-        "stock": true
+        "stock": true,
+        "keyWord": ["Jacket", "cloth", "man"]
     },
     {
         "id": 4,
@@ -53,7 +56,8 @@
             "count": 430
         },
         "color": "blue",
-        "stock": false
+        "stock": false,
+        "keyWord": ["t-shirt", "cloth", "man"]
     },
     {
         "id": 5,
@@ -67,7 +71,8 @@
             "count": 400
         },
         "color": "silver",
-        "stock": true
+        "stock": true,
+        "keyWord": ["jewelry", "necklace", "gold", "silver", "ornament"]
     },
     {
         "id": 6,
@@ -81,7 +86,8 @@
             "count": 70
         },
         "color": "gold",
-        "stock": true
+        "stock": true,
+        "keyWord": ["jewelry", "necklace", "gold", "silver", "ornament"]
     },
     {
         "id": 7,
@@ -95,7 +101,8 @@
             "count": 400
         },
         "color": "white",
-        "stock": true
+        "stock": true,
+        "keyWord": ["jewelry", "necklace", "gold", "silver", "ornament"]
     },
     {
         "id": 8,
@@ -109,7 +116,8 @@
             "count": 100
         },
         "color": "gold",
-        "stock": true
+        "stock": true,
+        "keyWord": ["jewelry", "necklace", "gold", "silver", "ornament"]
     },
     {
         "id": 9,
@@ -123,7 +131,14 @@
             "count": 203
         },
         "color": "black",
-        "stock": false
+        "stock": false,
+        "keyWord": [
+            "electronics",
+            "computer",
+            "hard drive",
+            "usb",
+            "accessories"
+        ]
     },
     {
         "id": 10,
@@ -137,7 +152,15 @@
             "count": 470
         },
         "color": "black",
-        "stock": true
+        "stock": true,
+        "keyWord": [
+            "electronics",
+            "computer",
+            "hard drive",
+            "usb",
+            "accessories",
+            "ssd"
+        ]
     },
     {
         "id": 11,
@@ -151,7 +174,15 @@
             "count": 319
         },
         "color": "black",
-        "stock": false
+        "stock": false,
+        "keyWord": [
+            "electronics",
+            "computer",
+            "hard drive",
+            "usb",
+            "accessories",
+            "ssd"
+        ]
     },
     {
         "id": 12,
@@ -165,7 +196,17 @@
             "count": 400
         },
         "color": "blue",
-        "stock": true
+        "stock": true,
+        "keyWord": [
+            "electronics",
+            "computer",
+            "hard drive",
+            "usb",
+            "accessories",
+            "ssd",
+            "playstation",
+            "gaming"
+        ]
     },
     {
         "id": 13,
@@ -179,7 +220,18 @@
             "count": 250
         },
         "color": "black",
-        "stock": true
+        "stock": true,
+        "keyWord": [
+            "electronics",
+            "computer",
+            "hard drive",
+            "usb",
+            "accessories",
+            "ssd",
+            "playstation",
+            "gaming",
+            "monitor"
+        ]
     },
     {
         "id": 14,
@@ -193,7 +245,18 @@
             "count": 140
         },
         "color": "silver",
-        "stock": true
+        "stock": true,
+        "keyWord": [
+            "electronics",
+            "computer",
+            "hard drive",
+            "usb",
+            "accessories",
+            "ssd",
+            "playstation",
+            "gaming",
+            "monitor"
+        ]
     },
     {
         "id": 15,
@@ -207,7 +270,8 @@
             "count": 235
         },
         "color": "purple",
-        "stock": false
+        "stock": false,
+        "keyWord": ["Jacket", "cloth", "women"]
     },
     {
         "id": 16,
@@ -221,7 +285,8 @@
             "count": 340
         },
         "color": "black",
-        "stock": true
+        "stock": true,
+        "keyWord": ["Jacket", "cloth", "women"]
     },
     {
         "id": 17,
@@ -235,7 +300,8 @@
             "count": 679
         },
         "color": "blue",
-        "stock": true
+        "stock": true,
+        "keyWord": ["Jacket", "cloth", "women"]
     },
     {
         "id": 18,
@@ -249,7 +315,8 @@
             "count": 130
         },
         "color": "white",
-        "stock": true
+        "stock": true,
+        "keyWord": ["t-shirt", "cloth", "women"]
     },
     {
         "id": 19,
@@ -263,7 +330,8 @@
             "count": 146
         },
         "color": "red",
-        "stock": false
+        "stock": false,
+        "keyWord": ["t-shirt", "cloth", "women"]
     },
     {
         "id": 20,
@@ -277,6 +345,7 @@
             "count": 145
         },
         "color": "purple",
-        "stock": true
+        "stock": true,
+        "keyWord": ["t-shirt", "cloth", "women"]
     }
 ]

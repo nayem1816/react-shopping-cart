@@ -13,8 +13,6 @@ export const productSlice = createSlice({
     name: 'product',
     initialState: {
         products: [],
-        categories: [],
-        colors: [],
         loading: false,
         error: null,
     },
@@ -27,9 +25,11 @@ export const productSlice = createSlice({
             state.loading = false;
             state.error = null;
             state.categories = [
+                'Category',
                 ...new Set(action.payload.map((item) => item.category)),
             ];
             state.colors = [
+                'Color',
                 ...new Set(action.payload.map((item) => item.color)),
             ];
         });
@@ -39,13 +39,6 @@ export const productSlice = createSlice({
             state.products = [];
         });
     },
-    reducers: {
-        setProduct: (state, action) => {
-            state.products = action.payload;
-        },
-    },
 });
-
-export const { setProduct } = productSlice.actions;
 
 export default productSlice.reducer;

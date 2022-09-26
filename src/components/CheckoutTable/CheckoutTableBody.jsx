@@ -70,7 +70,7 @@ const CheckoutTableBody = () => {
                             style={{ color: '#1246AF' }}
                             className="font-bold"
                         >
-                            ${product?.price * product.quantity}
+                            ${(product?.price * product.quantity).toFixed(2)}
                         </span>
                     </td>
                 </tr>

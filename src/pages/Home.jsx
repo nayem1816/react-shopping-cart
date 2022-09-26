@@ -7,10 +7,10 @@ import TableTop from './../components/TableTop/TableTop';
 import { ToastContainer } from 'react-toastify';
 
 const Home = () => {
-    const { products, loading, error } = useSelector(
-        (state) => state.productReducer
-    );
-    // const cartData = useSelector((state) => state.cartReducer.cart);
+    const { loading, error } = useSelector((state) => state.productReducer);
+
+    const filteredProducts = useSelector((state) => state.filterReducer);
+
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -24,8 +24,6 @@ const Home = () => {
         return <div>{error}</div>;
     }
 
-    // console.log(cartData);
-
     return (
         <div className="container mx-auto flex items-center justify-center my-10">
             <ToastContainer />
@@ -36,7 +34,9 @@ const Home = () => {
                 <div className="shadow-md sm:rounded-lg">
                     <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                         <TableHead />
-                        <TableBody productsData={products} />
+                        <TableBody
+                            productsData={filteredProducts.filteredProducts}
+                        />
                     </table>
                 </div>
             </div>
